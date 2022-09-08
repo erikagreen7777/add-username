@@ -25,7 +25,7 @@ function UserNameInput(props) {
           <input type="text" onChange={userNameInputChangeHandler} />
         </div>
         <div>
-          <label>Add Password</label>
+          <label>Add Age</label>
           <input type="text" onChange={ageInputChangeHandler} />
         </div>
         <button type="submit">Add Username</button>
