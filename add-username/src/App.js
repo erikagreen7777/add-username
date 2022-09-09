@@ -8,21 +8,14 @@ const App = () => {
   // const [userAge, setUserAge] = useState("");
   const [userNameAndAge, setUserNameAndAge] = useState("");
 
-  const addUserNameHandler = (enteredText) => { 
+  const addUserNameHandler = (...enteredText) => {
     const [enteredUserName, enteredAge] = enteredText;
-    var formattedUserNameAndAge = `${enteredUserName} (${enteredAge})`;
+    const formattedUserNameAndAge = `${enteredUserName} (${enteredAge})`;
+
     setUserNameAndAge((prevEnteredText) => {
-      console.log(formattedUserNameAndAge)
-      return [{text: formattedUserNameAndAge, id: Math.random()}, prevEnteredText];
+      console.log("preventered: " + prevEnteredText.text)
+        return [{ text: formattedUserNameAndAge, id: Math.random().toString()}, {text: prevEnteredText.text, id: prevEnteredText.id}];
     });
-    // setUserName((prevUsername) => {
-    //   const updatedUserName = [...prevUsername];
-    //   updatedUserName.unshift({ text: enteredUserNameText, id: Math.random() });
-    // });
-    // setUserAge((prevUserAge) => {
-    //   const updatedUserAge = [...prevUserAge];
-    //   updatedUserAge.unshift({ text: enteredAgeText, id: Math.random() });
-    // });
   };
 
   let content = (

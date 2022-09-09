@@ -1,5 +1,10 @@
-const UserListItem = (props) => {
-  <li>return {props.children}</li>;
-};
+function UserListItem(props) {
+  return (
+    <li>
+      {props.children}
+      {console.log("UserListItem " + props.children)}
+    </li>
+  );
+}
 
-export default UserListItem
+export default UserListItem;
