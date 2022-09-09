@@ -13,8 +13,7 @@ function UserNameInput(props) {
   };
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    // cooncat username & age
-    props.onAddUsername(enteredUsername);
+    props.onAddUsername(enteredUsername, enteredAge);
   };
 
   return (
@@ -26,7 +25,7 @@ function UserNameInput(props) {
         </div>
         <div>
           <label>Add Age</label>
-          <input type="text" onChange={ageInputChangeHandler} />
+          <input type="number" onChange={ageInputChangeHandler} />
         </div>
         <button type="submit">Add Username</button>
       </div>

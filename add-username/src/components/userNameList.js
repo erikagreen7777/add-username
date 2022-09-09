@@ -1,9 +1,9 @@
 import UserListItem from "./userListItem";
 
-function UserNameList(props) {
+function UserNameList(items) {
   return (
     <ul>
-      {props.items.map((userlist) => (
+      {items.items.map((userlist) => (
         <UserListItem
           key={userlist.id}
           id={userlist.id}        >
