@@ -13,8 +13,13 @@ const App = () => {
     const formattedUserNameAndAge = `${enteredUserName} (${enteredAge})`;
 
     setUserNameAndAge((prevEnteredText) => {
-      console.log("preventered: " + prevEnteredText.text)
-        return [{ text: formattedUserNameAndAge, id: Math.random().toString()}, {text: prevEnteredText.text, id: prevEnteredText.id}];
+      const updatedUserName = [...prevEnteredText];
+      // console.log("updated " + updatedUserName)
+      updatedUserName.unshift({
+        text: formattedUserNameAndAge,
+        id: Math.random().toString(),
+      });
+      return updatedUserName;
     });
   };
 
