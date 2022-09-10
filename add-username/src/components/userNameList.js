@@ -1,7 +1,6 @@
 import UserListItem from "./userListItem";
 
 function UserNameList(props) {
-  // console.log('UserNameList text: ' + props.items[0].text)
   return (
     <ul>
       {props.items.map((userlist) => (

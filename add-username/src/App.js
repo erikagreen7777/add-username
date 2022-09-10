@@ -18,7 +18,7 @@ const App = () => {
       updatedUserName.unshift({
         text: formattedUserNameAndAge,
         id: Math.random().toString(),
-      });
+    });
       return updatedUserName;
     });
   };
@@ -32,7 +32,7 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <div className="App"> 
       <section>
         <UserNameInput onAddUsername={addUserNameHandler} />
       </section>

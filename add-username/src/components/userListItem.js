@@ -4,7 +4,7 @@ function UserListItem(props) {
   return (
     <li>
       {props.children}
-      {console.log("UserListItem " + props.children)}
+      {/* {console.log("UserListItem " + props.children)} */}
     </li>
   );
 }
