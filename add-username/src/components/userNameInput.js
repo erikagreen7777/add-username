@@ -23,11 +23,11 @@ function UserNameInput(props) {
       <div>
         <div>
           <label>Add Username</label>
-          <input type="text" onChange={userNameInputChangeHandler} />
+          <input type="text" value={enteredUsername} onChange={userNameInputChangeHandler} />
         </div>
         <div>
           <label>Add Age</label>
-          <input type="number" onChange={ageInputChangeHandler} />
+          <input type="number" value={enteredAge} onChange={ageInputChangeHandler} />
         </div>
         <button type="submit">Add Username</button>
       </div>
